@@ -1,0 +1,43 @@
+<div>
+    <!--THIS IS TOP HEADER-->
+    <div id="vp_header">
+        <p>Venture Pulse Dashboard</p>
+        <hr>
+    </div>
+
+    <!--THIS IS LOGIN AREA-->
+    <div id="signUp_area">
+        <p>Sign Up To Venture Pulse</p>
+        <div id="signUp_form">
+
+            <div *ngIf="errorMessage" class="alert alert-danger alert-dismissable fade in" id="errorMessage">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>{{errorMessage}}!</strong> 
+			</div>
+
+            <form name="form" (ngSubmit)="f.form.valid && signUp()" #f="ngForm"  novalidate>
+                
+                <div [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                    <label for="email">EMAIL  </label> <br>
+                    <input type="text" class="box" name="email" [(ngModel)]="model.email" #email="ngModel" required />
+                    <p *ngIf="f.submitted && !email.valid" class="help-block">Email is required</p>
+                </div>
+
+                <div [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                    <label for="password">PASSWORD</label> <br>
+                    <input type="password" class="box" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                    <p *ngIf="f.submitted && !password.valid" class="help-block">Password is required</p>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">SIGN UP </button>
+                    <img *ngIf="loading" src="http://www.webmasto.com/wp-content/uploads/2015/02/Modern-Loader.gif">
+                    <p id="new-user">Existing User?
+                        <a [routerLink]="['/login']"> Log In </a>
+                    </p>
+                </div>
+
+            </form>
+        </div> <!--LOGIN_FORM END HERE-->
+    </div><!--LOGIN_AREA END HERE-->
+</div>

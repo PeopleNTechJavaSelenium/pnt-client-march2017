@@ -1,6 +1,6 @@
 import { PntClientPage } from './app.po';
 
-describe('pnt-client App', () => {
+describe('pnt-client App', function() {
   let page: PntClientPage;
 
   beforeEach(() => {

@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']">
+                <img src="../../assets/images/dashboard_logo.png" alt="Venture Pulse Daily">
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> {{ getUserProfile() }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a [routerLink]="['/']"> ALL INVESTORS </a></li>
+                        <li><a [routerLink]="['/login']"> LOG OUT </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

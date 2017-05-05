@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<div class="container" id="pageTitle">
+    <div class="row" >
+        <p class="col-md-12">
+            {{ pageTitle }}
+        </p>
+    </div>
+</div>
+
+<hr class="all-hr">
+
+<div class="container" id="create-emp-profile">
+  	<div class="row emp-info">
+    	<form [formGroup]="vcForm" (ngSubmit)="save(vcForm)" id="emp-form" novalidate>
+
+			<div formGroupName="empInfo">
+               <div id="email">
+                  <label for="email"> Employee Email </label> <br/>
+                  <input type="text" class="emp-email" formControlName="empEmail" required >
+                </div>
+                <div id="emp-name">
+                <label for="emp-name"> Employee Name </label> <br/>
+                <input type="text" class="emp-name" formControlName="empName" required >
+                </div>
+                <div id="salary">
+                  <label for="salary"> Salary </label> <br/>
+                  <input type="text" class="salary" formControlName="salary" required >
+                </div>
+                <div id="type">
+                    <label for="type"> Department </label> <br/>
+                    <select class="emp-type" formControlName="department">
+                        <option value="Engineering">Engineering</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Fund of Funds">Product</option>
+                    </select>
+                </div>
+            <div class="inline-btn">
+                <button class="submit-btn pull-right" type="submit">SUBMIT</button>
+                <button class="cancel-btn pull-right" type="button" (click)="cancel()">CANCEL</button>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>

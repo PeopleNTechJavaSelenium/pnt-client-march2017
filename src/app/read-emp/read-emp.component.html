@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+<div class="container" id="pageTitle">
+    <div class="row" >
+        <p class="col-md-12">
+          	{{ pageTitle }}
+        </p>
+    </div>
+</div>
+
+<hr class="all-hr">
+
+
+<div class="container">
+  	<div class="row">
+        <div class="col-md-6">
+            <div class='row'>
+                <div class='col-md-12' id="search-vc-profile">
+                    <input type='text' [(ngModel)]='listFilter' name="listFilter" placeholder="Enter Employee Name" />
+                     <span class="glyphicon glyphicon-search"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <a [routerLink]="['/createprofile']" id="create-vc-button" class="btn btn-xs pull-right">+ Create Emp Profile</a>
+        </div>
+  	</div>
+</div>
+<br>
+
+<div class="container" id="read-emp-profiel">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 26%">Emp Email</th>
+                        <th style="width: 14%">Emp Name </th>
+                        <th style="width: 26%">salary</th>
+                        <th style="width: 12%">department</th>
+                        <th style="width: 5%"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let profile of EmpProfile  | empFilter:listFilter" class="empInfo">
+                       <td> {{ profile.vcInfo.vcEmail }} </td>
+                        <td> {{ profile.vcInfo.vcName }}  </td>
+                        <td> {{ profile.vcInfo.salary }} </td>
+                        <td> {{ profile.vcInfo.department }} </td>
+                        <td><a [routerLink]="['/editprofile', profile._id]">Edit</a></td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+

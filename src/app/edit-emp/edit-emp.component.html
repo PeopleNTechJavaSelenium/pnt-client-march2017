@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<div class="container" id="pageTitle">
+    <div class="row" >
+        <p class="col-md-12">
+          	{{ pageTitle }}
+        </p>
+    </div>
+</div>
+
+<hr class="all-hr">
+
+<div class="container">
+  	<div class="row">
+        <div class="col-md-12">
+            <a id="delete-vc-button" class="btn btn-xs pull-right"  (click)="deleteProfile()" >Delete This Profile</a>
+        </div>
+  	</div>
+</div>
+<br>
+
+<div class="container" id="edit-vc-profile">
+  	<div class="row emp-info">
+		    <form novalidate [formGroup]="empForm"  (ngSubmit)="saveProduct()" id="emp-form">
+			      <div *ngIf="errorMessage" class="alert alert-danger" role="alert"> {{errorMessage}} </div>
+
+			          <div formGroupName="empInfo">
+
+                  <div id="empEmail">
+                    <label for="empEmail"> Employee Email </label> <br/>
+                    <input type="text" class="emp-email" formControlName="empEmail">
+                  </div>
+                <div id="empName">
+                    <label for="empName"> Investor Name </label> <br/>
+                    <input type="text" class="emp-name" formControlName="empName">
+                </div>
+
+                <div id="type">
+                    <label for="type"> Type </label> <br/>
+                    <select class="vc-type" formControlName="vcType">
+                      <option value="Engineering">Engineering</option>
+                      <option value="Finance">Finance</option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Fund of Funds">Product</option>
+                    </select>
+                </div>
+
+
+            <div class="inline-btn">
+                <button class="submit-btn pull-right" type="submit" [disabled]="vcForm.invalid" >SUBMIT</button>
+                <button class="cancel-btn pull-right" type="button" (click)="cancel()">CANCEL</button>
+            </div>
+        </form>
+  	</div>
+</div>
+<br>
+<br>
+<br>
