@@ -7,7 +7,7 @@ import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/observable/merge';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
-import { Location }               from '@angular/common';
+import { Location } from '@angular/common';
 import { EmpProfile } from '../Profiles/EmpProfile';
 import { MyServices } from '../EmpServices/my-service.service';
 import { AuthenticationService } from '../EmpServices/authentication.service';
