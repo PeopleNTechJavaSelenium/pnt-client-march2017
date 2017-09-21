@@ -15,7 +15,7 @@ export class UserService {
 
     getUsers(): Observable<User[]> {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
-        return this.http.get('http://api.upscalelearning.com:8080/service-webapp/api/LogIn')
+        return this.http.get('http://ec2-52-35-11-220.us-west-2.compute.amazonaws.com:8080/service-webapp/api/LogIn')
             .map((response: Response) => response.json());
     }
 }

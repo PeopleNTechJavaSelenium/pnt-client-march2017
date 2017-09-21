@@ -8,7 +8,7 @@ import {EmpProfile} from '../Profiles/EmpProfile';
 
 @Injectable()
 export class MyServices {
-  private serverUrl:string = "http://api.upscalelearning.com:8080/service-webapp/api";
+  private serverUrl:string = "http://ec2-52-35-11-220.us-west-2.compute.amazonaws.com:8080/service-webapp";
 
 	private headers: Headers;
 
