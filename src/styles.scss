@@ -1,0 +1,427 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+My EXTERNAL CSS
+===============
+AUTHOR  : VENTURE PULSE TEAM
+DATE: SEP 24TH 2016.
+THIS THE ETERNAL SHEET FOR LOGIN PAGE.....
+*/
+
+
+/*------------------------------------
+    Variable....Styling ||
+--------------------------------------*/
+$create_btn_bag_color : #3B961D;
+$delete_btn_bag_color : #EC7063;
+$submit_btn_bag_color : #dddddd;
+$addmore_btn_bag_color : #3498DB;
+$white_font_color : #ffffff;
+
+
+/*------------------------------------
+    Global....Styling ||
+--------------------------------------*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Helvetica Neue", sens-serif;
+  background: #F9F9F9;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  text-indent: 15px;
+  font-weight: 200;
+}
+
+.all-hr {
+  margin: 0 -20px;
+  border-color: #777777;
+  opacity: .3;
+  margin-bottom: 30px;
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::placeholder {
+  color: #777777;
+  font-weight: 300;
+}
+
+
+/*---------------------------------
+ 		LOGIN AND SIGNUP STYLING ||
+-----------------------------------*/
+#vp_header {
+  text-align: center;
+  color: #D86C00;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-top: 175px;
+  margin-bottom: 10px;
+  hr {
+    max-width: 428px;
+    margin: 0 auto;
+    font-weight: normal;
+  }
+}
+
+#login_area , #signUp_area {
+  width: 430px;
+  height: 290px;
+  margin: 70px auto;
+  p {
+    margin-bottom:5px;
+    font-size: 14px;
+    color: #535353;
+    opacity: .6;
+  }
+  #login_form, #signUp_form {
+    width: 425px;
+    background: $white_font_color;
+    border: 1px solid #dbdbdb;
+    #errorMessage {
+      text-align: center;
+      border-radius: 0px;
+      border: 0px;
+    }
+    form {
+      margin-left: 50px;
+      margin-top: 25px;
+      label {
+        font-size: 12px;
+        color: #979797;
+      }
+      input{
+        margin-top: 5px;
+        width: 320px;
+        height: 40px;
+        font-size: 14px;
+        color: #979797;
+        margin-bottom: 20px;
+      }
+      button {
+        width: 85px;
+        height: 32px;
+        background-color: #444444 ;
+        color: $white_font_color;
+        border: none;
+        margin-bottom: 20px;
+      }
+      img {
+        height: 35px;
+        margin-left: 10px;
+        margin-bottom: 2px;
+      }
+      .help-block {
+        margin-top: -12px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+/*---------------------------------
+ 		HEADER STYLING ||
+-----------------------------------*/
+
+#navbar {
+  background: #333333;
+  height: 56px;
+
+  ul {
+    li {
+      font-size: 14px;
+      padding: 3px;
+      a {
+        color: $white_font_color;
+        font-size: 13px;
+      }
+      ul {
+        padding: 0px;
+        width: 169px;
+        margin-left: 3px;
+        border-radius: 0 !important;
+        -webkit-border-radius: 0 !important;
+        -moz-border-radius: 0 !important;
+        li {
+          a {
+            font-size: 12px;
+            color:#777777;
+            font-weight: 200;
+            margin: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------
+ 		TITLE PAGE STYLING ||
+-----------------------------------*/
+
+#pageTitle {
+  margin-top: 110px;
+  p {
+    margin-left: 0px;
+    font-size: 12px;
+    color: #555555;
+  }
+}
+
+/*---------------------------------
+ 	READ PROFILE PAGE STYLING ||
+-----------------------------------*/
+
+#read-vc-profiel {
+  table {
+    text-align: left;
+    border-collapse: collapse;
+    thead {
+      background-color: #EEEEEE;
+      border: 3px solid #EEEEEE;
+      tr {
+        height: 40px;
+        th {
+          font-weight: 300;
+          text-indent: 10px;
+          font-size: 13px;
+          color: #555555;
+          padding-bottom: 12px;
+        }
+      }
+    }
+    tbody{
+      background-color: $white_font_color;
+      tr {
+        height: 40px;
+        td {
+          border: 1px solid #DDDDDD;
+          color: #777777;
+          font-size: 12px;
+          font-weight: normal;
+          padding: 12px 0px 8px 15px;
+          .comma:not(:first-child) {
+            margin-left: -.3em;
+          }
+          .comma:empty {
+            display: none;
+          }
+          .comma:not(:first-child):before {
+            content: ", ";
+          }
+        }
+      }
+    }
+    tfoot {
+      text-align: right;
+      tr {
+        td {
+          mfBootstrapPaginator {
+            margin-right: -10px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/*-----------------------------------
+     @@CREATE PROFILE STYLING
+-------------------------------------*/
+#create-vc-profile, #edit-vc-profile {
+  label {
+    color: #525252 ;
+    font-weight: 400;
+    font-size: 15px;
+    opacity: .7;
+    margin: 8px 0px;
+  }
+  input {
+    font-size: 16px;
+    color: #999999;
+    font-weight: 400;
+  }
+
+  .vc-name, .vc-type, .vc-deals, .vc-exits, .vc-url, .vc-email, .vc-facebook, .vc-twitter, .vc-linkedin, .vc-founded-year, .phone_number {
+    width: 50%;
+    height: 45px;
+  }
+
+  select {
+    font-size: 16px;
+    color: #999999;
+    font-weight: 400;
+    background: $white_font_color;
+    border: 1px solid #dbdbdb;
+  }
+
+  .vc-location{
+    width: 368px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  .well {
+    background-color: #EEEEEE;
+    border-radius: 0;
+    label{
+      font-size: 14px;
+      color: #555555;
+      margin-right: 10px;
+    }
+    input {
+      height: 35px;
+      width: 270px;
+    }
+    button {
+      margin-left: 10px;
+      height: 35px;
+      width: 100px;
+      margin-top: -3px;
+      background: #3498DB;
+      color: $white_font_color;
+    }
+  }
+
+  table {
+    background: $white_font_color;
+    thead{
+      background-color: #EEEEEE;
+      border: 3px solid #EEEEEE;
+      tr{
+        height: 40px;
+        th {
+          font-weight: 300;
+          text-indent: 10px;
+          font-size: 13px;
+          color: #555555;
+          padding-bottom: 12px;
+        }
+      }
+    }
+  }
+  tbody{
+    background-color: $white_font_color;
+    tr {
+      height: 40px;
+      td {
+        border: 1px solid #DDDDDD;
+        color: #777777;
+        font-size: 12px;
+        font-weight: normal;
+        text-indent: 10px;
+        padding-bottom: 0px;
+        input {
+          width: 93%;
+          margin-bottom: 6px;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------------
+    @BUTTON
+-----------------------------------*/
+
+.vc_buttons {
+  border: 0px;
+  border-radius: 0px;
+  font-size: 11px;
+  color: $white_font_color;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.big_btn_size {
+  width: 120px;
+  height: 40px;
+}
+.small_btn_size {
+  width: 135px;
+  height: 20px;
+}
+
+#create-vc-button {
+  @extend .vc_buttons;
+  @extend .small_btn_size;
+  background: $create_btn_bag_color;
+  margin-left: 10px;
+}
+
+#delete-vc-button {
+  @extend .vc_buttons;
+  @extend .small_btn_size;
+  background: $delete_btn_bag_color;
+  margin-bottom: -10px;
+}
+.cancel-btn {
+  @extend .vc_buttons;
+  @extend .big_btn_size;
+  background: $addmore_btn_bag_color;
+}
+
+.addmore {
+  @extend .vc_buttons;
+  @extend .big_btn_size;
+  background: $addmore_btn_bag_color;
+}
+.submit-btn {
+  @extend .vc_buttons;
+  @extend .big_btn_size;
+  background: $delete_btn_bag_color;
+  margin-left: 10px;
+  :hover {
+    background: $addmore_btn_bag_color;;
+  }
+}
+#download-csv {
+  margin-top: 3px;
+  font-size: 12px;
+}
+.inline-btn {
+  margin-top: -60px;
+}
+/*---------------------------------
+    @SEARCH
+-----------------------------------*/
+#search-vc-profile {
+  input {
+    width: 310px;
+    height: 40px;
+    margin-top: -10px;
+  }
+  span {
+    margin-left: -30px;
+    color: #1893F1;
+  }
+}
+
+
+.scroll-section {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  cursor: pointer;
+}
