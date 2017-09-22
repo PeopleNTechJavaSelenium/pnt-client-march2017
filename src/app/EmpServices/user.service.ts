@@ -15,7 +15,7 @@ export class UserService {
 
     getUsers(): Observable<User[]> {
         let headers = new Headers({ 'Authorization': 'Bearer ' + this.authenticationService.token });
-        return this.http.get('http://info.venturepulse.org:8080/service-webapp/api/LogIn')
+        return this.http.get('http://52.35.11.220:8080/service-webapp/api/LogIn')
             .map((response: Response) => response.json());
     }
 }

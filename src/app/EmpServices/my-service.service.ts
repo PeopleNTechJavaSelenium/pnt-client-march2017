@@ -8,7 +8,7 @@ import {EmpProfile} from '../Profiles/EmpProfile';
 
 @Injectable()
 export class MyServices {
-  private serverUrl:string = "http://info.venturepulse.org:8080/service-webapp/api";
+  private serverUrl:string = "http://52.35.11.220:8080/service-webapp/api";
 
 	private headers: Headers;
 

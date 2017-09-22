@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class AuthenticationService {
     public token: string;
-    public registrationServerUrl:string = 'http://info.venturepulse.org:8080/service-webapp/api/LogIn';
-    public loginServerUrl:string = 'http://info.venturepulse.org:8080/service-webapp/api/SignUp';
+    public registrationServerUrl:string = 'http://52.35.11.220:8080/service-webapp/api/LogIn';
+    public loginServerUrl:string = 'http://52.35.11.220:8080/service-webapp/api/SignUp';
 
     constructor(private http: Http) {
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
