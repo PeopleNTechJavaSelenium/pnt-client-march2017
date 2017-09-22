@@ -1,6 +1,5 @@
 {
   "project": {
-    "version": "1.0.0-beta.22-1",
     "name": "sassy-project"
   },
   "apps": [
@@ -16,9 +15,8 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
-      "mobile": false,
       "styles": [
-        "styles.css",
+        "styles.scss",
         "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
@@ -33,10 +31,6 @@
       }
     }
   ],
-  "addons": [
-  ],
-  "packages": [
-  ],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"
@@ -49,18 +43,13 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "prefixInterfaces": false,
-    "inline": {
-      "style": false,
-      "template": false
+    "class": {
+      "spec": false
     },
-    "spec": {
-      "class": false,
-      "component": true,
-      "directive": true,
-      "module": false,
-      "pipe": true,
-      "service": true
+    "component": {
+      "spec": true,
+      "inlineStyle": false,
+      "inlineTemplate": false
     }
   }
 }
