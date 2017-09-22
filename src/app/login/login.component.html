@@ -1,17 +1,17 @@
 <div>
 	<!--THIS IS TOP HEADER-->
   	<div id="vp_header">
-    	<p>Venture Pulse Dashboard</p>
+    	<p>Employee Information System</p>
     	<hr>
 	</div>
-  
+
   	<div id="login_area">
-    	<p>Log In To Venture Pulse</p>
+    	<p>Log In To Employee Information System</p>
 		<div id="login_form">
 
 			<div *ngIf="errorMessage" class="alert alert-danger alert-dismissable fade in" id="errorMessage">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>{{errorMessage}}!</strong> 
+					<strong>{{errorMessage}}!</strong>
 			</div>
 
 			<form name="form" (ngSubmit)="f.form.valid && adminLogin()" #f="ngForm" novalidate>
