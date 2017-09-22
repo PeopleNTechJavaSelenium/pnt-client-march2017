@@ -1,22 +1,22 @@
 <div>
     <!--THIS IS TOP HEADER-->
     <div id="vp_header">
-        <p>Venture Pulse Dashboard</p>
+        <p>Employee Information System</p>
         <hr>
     </div>
 
     <!--THIS IS LOGIN AREA-->
     <div id="signUp_area">
-        <p>Sign Up To Venture Pulse</p>
+        <p>Sign Up To Employee Information System</p>
         <div id="signUp_form">
 
             <div *ngIf="errorMessage" class="alert alert-danger alert-dismissable fade in" id="errorMessage">
 					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-					<strong>{{errorMessage}}!</strong> 
+					<strong>{{errorMessage}}!</strong>
 			</div>
 
             <form name="form" (ngSubmit)="f.form.valid && signUp()" #f="ngForm"  novalidate>
-                
+
                 <div [ngClass]="{ 'has-error': f.submitted && !email.valid }">
                     <label for="email">EMAIL  </label> <br>
                     <input type="text" class="box" name="email" [(ngModel)]="model.email" #email="ngModel" required />
