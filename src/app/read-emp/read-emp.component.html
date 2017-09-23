@@ -43,12 +43,13 @@
                 </thead>
 
                 <tbody>
-                    <tr *ngFor="let profile of EmpProfile" class="empInfo">
-                    <!--<tr *ngFor="let profile of EmpProfile  | empFilter:listFilter" class="empInfo">-->
-                       <td> {{ profile.vcInfo.vcEmail }} </td>
-                        <td> {{ profile.vcInfo.vcName }}  </td>
-                        <td> {{ profile.vcInfo.salary }} </td>
-                        <td> {{ profile.vcInfo.department }} </td>
+                    <!--<tr *ngFor="let profile of EmpProfile" class="empInfo">-->
+
+                    <tr *ngFor="let profile of EmpProfile" class="vcinfo">
+                       <td> {{ profile.empEmail }} </td>
+                        <td> {{ profile.empName }}  </td>
+                        <td> {{ profile.salary }} </td>
+                        <td> {{ profile.department }} </td>
                         <td><a [routerLink]="['/editprofile', profile._id]">Edit</a></td>
                     </tr>
                 </tbody>

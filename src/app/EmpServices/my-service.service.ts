@@ -8,23 +8,22 @@ import {EmpProfile} from '../Profiles/EmpProfile';
 
 @Injectable()
 export class MyServices {
-  private serverUrl:string = "http://52.35.11.220:8080/service-webapp/api";
+    private serverUrl:string = 'http://52.35.11.220:8080/service-webapp/api';
+    private headers: Headers;
 
-	private headers: Headers;
+    constructor( private _http: Http ) {
+        this.headers = new Headers();
+        this.headers.append('Content-Type', 'application/json');
+        this.headers.append('Accept', 'application/json');
+    }
 
-	constructor( private _http: Http ){
-		this.headers = new Headers();
-		this.headers.append('Content-Type', 'application/json');
-		this.headers.append('Accept','application/json');
-	}
-
-	//THIS IS FOR GET ALL PROFILES::::
-	getProfiles():Observable<EmpProfile[]>{
-		let url = this.serverUrl + "/AllEmployeeResources";
-		return this._http.get(url, {headers: this.headers}).map(res=> res.json()).catch(err=>{
-		return Observable.throw(err);
-		});
-	}
+    //  THIS IS FOR GET ALL PROFILES::::
+    getProfiles():Observable<EmpProfile[]>{
+        let url = this.serverUrl + "/AllEmployeeResources";
+        return this._http.get(url, {headers: this.headers}).map(res=> res.json()).catch(err=>{
+        return Observable.throw(err);
+        });
+    }
 
 	//THIS IS FOR POST VC TO THE SERVER
 	postRestApi(model): Observable<EmpProfile>{
